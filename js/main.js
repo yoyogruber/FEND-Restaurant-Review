@@ -1,3 +1,11 @@
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker
+  .register('/js/service-worker.js')
+  .catch(function(err){
+    console.log(err);
+  });
+}
+
 let restaurants,
   neighborhoods,
   cuisines
