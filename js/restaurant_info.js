@@ -1,5 +1,13 @@
 let restaurant;
 var newMap;
+//registering the service worker  here aswell, as a user can come directly to restaurant.html
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker
+  .register('js/sw.js')
+  .catch(function(err){
+    console.log(err);
+  });
+}
 
 /**
  * Initialize map as soon as the page is loaded.
